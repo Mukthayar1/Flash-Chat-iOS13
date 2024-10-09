@@ -1316,6 +1316,7 @@ PODS:
 DEPENDENCIES:
   - CLTypingLabel
   - FirebaseAuth
+  - FirebaseCore
   - FirebaseFirestore
   - Toaster
 
@@ -1364,6 +1365,6 @@ SPEC CHECKSUMS:
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
 
-PODFILE CHECKSUM: bf9b114e748804d8aae52e0e8c632bd5c45e3e03
+PODFILE CHECKSUM: 86ffeff4bd0168b67167fe04d9f92232117e8c2f
 
 COCOAPODS: 1.15.2
