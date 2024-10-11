@@ -36,7 +36,9 @@ class ChatViewController: UIViewController {
                             let newMessage = Message(sender: sender, body: body);
                             self.message.append(newMessage);
                             DispatchQueue.main.async {
-                                self.tableView.reloadData()
+                                self.tableView.reloadData();
+                                let indexPath = IndexPath(item: self.message.count - 1 , section: 0);
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                         
@@ -57,6 +59,10 @@ class ChatViewController: UIViewController {
                     print("eeee",e)
                 } else {
                     print("Message sended")
+                    DispatchQueue.main.async {
+                        self.messageTextfield.text = ""
+                    }
+                    
                 }
             }
         }
@@ -80,8 +86,26 @@ extension ChatViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let currentMessage = message[indexPath.row];
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label?.text = "\(message[indexPath.row].body)";
+        cell.label?.text = "\(currentMessage.body)";
+        
+        
+        if currentMessage.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true;
+            cell.rightImageView.isHidden = false;
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple);
+            cell.label.textColor = UIColor(named: Constants.BrandColors.purple)
+        } else {
+            cell.leftImageView.isHidden = false;
+            cell.rightImageView.isHidden = true;
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.purple);
+            cell.label.textColor = UIColor(named: Constants.BrandColors.lightPurple)
+        }
+        
+
         return cell
     }
 }

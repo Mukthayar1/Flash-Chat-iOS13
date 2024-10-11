@@ -354,9 +354,15 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lmJ-dR-CC2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQz-is-NMz">
+                    <navigationBar key="navigationBar" multipleTouchEnabled="YES" contentMode="scaleToFill" id="XQz-is-NMz">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="BrandBlue"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="BrandBlue"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -368,6 +374,9 @@
             <point key="canvasLocation" x="-86.956521739130437" y="134.59821428571428"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="y7D-jv-BlJ"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="eNh-uq-YTa"/>
     </inferredMetricsTieBreakers>

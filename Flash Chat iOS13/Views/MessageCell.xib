@@ -11,21 +11,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="66" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Flash_Chat_iOS13" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="338" height="66"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="90" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Flash_Chat_iOS13" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="90"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="338" height="66"/>
+                <rect key="frame" x="0.0" y="0.0" width="361" height="90"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="N1I-i3-5GM">
-                        <rect key="frame" x="10" y="10" width="318" height="46"/>
+                        <rect key="frame" x="10" y="10" width="341" height="70"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="zQb-FI-Xk9">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="2wR-Cl-fiY"/>
+                                    <constraint firstAttribute="height" constant="40" id="VGS-Mr-PMc"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMb-CE-5Ry">
-                                <rect key="frame" x="0.0" y="0.0" width="258" height="46"/>
+                                <rect key="frame" x="60" y="0.0" width="221" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snD-VV-tP5">
-                                        <rect key="frame" x="10" y="10" width="238" height="26"/>
+                                        <rect key="frame" x="10" y="10" width="201" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,11 +46,11 @@
                                     <constraint firstAttribute="trailing" secondItem="snD-VV-tP5" secondAttribute="trailing" constant="10" id="kDG-Od-rGF"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="zQb-FI-Xk9">
-                                <rect key="frame" x="278" y="0.0" width="40" height="40"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="Ffu-Ok-dsw">
+                                <rect key="frame" x="301" y="0.0" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="2wR-Cl-fiY"/>
-                                    <constraint firstAttribute="height" constant="40" id="VGS-Mr-PMc"/>
+                                    <constraint firstAttribute="width" constant="40" id="Dav-2T-8iX"/>
+                                    <constraint firstAttribute="height" constant="40" id="i2A-5f-w3j"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -59,14 +66,16 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="label" destination="snD-VV-tP5" id="TxR-Qb-6dT"/>
+                <outlet property="leftImageView" destination="zQb-FI-Xk9" id="7JG-Ga-9lE"/>
                 <outlet property="messageBubble" destination="GMb-CE-5Ry" id="da2-Sf-q9G"/>
                 <outlet property="rightImageView" destination="zQb-FI-Xk9" id="KF5-J3-ZGD"/>
             </connections>
-            <point key="canvasLocation" x="145.03816793893128" y="-3.5211267605633805"/>
+            <point key="canvasLocation" x="125.95419847328243" y="4.9295774647887329"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="MeAvatar" width="36" height="36"/>
+        <image name="YouAvatar" width="36" height="36"/>
         <namedColor name="BrandPurple">
             <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
